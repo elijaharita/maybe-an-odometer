@@ -1,0 +1,40 @@
+.root {
+    display: inline-flex;
+    flex-direction: horizontal;
+    justify-content: flex-end;
+    font-family: var(--font-family-mono);
+    line-height: 2rem;
+    overflow: hidden;
+    height: 2rem;
+    transition: 0.5s;
+
+    // Highlighting and copying this value is currently meaningless because all
+    // the hidden digits get highlighted as well
+    user-select: none;
+}
+
+.digitDisplay {
+    display: block;
+    line-height: 1;
+    position: relative;
+    transition: 0.5s;
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+
+    @keyframes fade-in {
+        from {
+            top: 0;
+            opacity: 0%;
+        }
+
+        to {
+            opacity: 100%;
+        }
+    }
+}
+
+.digit {
+    display: block;
+    height: 2rem;
+    width: 1rem;
+}
